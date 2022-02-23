@@ -26,7 +26,7 @@ export const releaseMonthlyWhitelistPayment = functions.pubsub.schedule('*/15 * 
     let wallet = new ethers.Wallet(privateKey, simpleRpcProvider);
     const managedSigner = new NonceManager(wallet);
     let contractWithSigner = contract.connect(managedSigner);
-    let tx = await contractWithSigner.timelyWhitelistPaymentRelease();
+    let tx = await contractWithSigner.timelyWhitelistPaymentRelease({ nonce: wallet.getTransactionCount() });
 
     functions.logger.info(tx.hash);
     await tx.wait();
