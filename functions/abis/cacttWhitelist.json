@@ -192,6 +192,13 @@
   },
   {
     "inputs": [],
+    "name": "initialPaymentRelease",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "timelyWhitelistPaymentRelease",
     "outputs": [],
     "stateMutability": "nonpayable",
@@ -228,6 +235,16 @@
             "internalType": "uint256",
             "name": "nextPaymentUntil",
             "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "initial",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "payedInitial",
+            "type": "bool"
           }
         ],
         "internalType": "struct CactusWhitelist.HolderInfo",

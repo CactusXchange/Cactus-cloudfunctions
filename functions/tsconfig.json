@@ -19,6 +19,6 @@
     "noImplicitAny": false
   },
   "compileOnSave": true,
-  "include": ["src/**/*.ts", "tests/**/*.ts"],
+  "include": ["src/**/*.ts", "src/tests/**/*.ts"],
   "exclude": ["node_modules"]
 }

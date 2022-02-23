@@ -5,7 +5,7 @@ import { simpleRpcProvider } from '../utils/web3';
 import { CHAIN_ID } from '../config/constants/networks';
 import contracts from '../config/constants/contracts';
 
-import cacttWhitelistAbi from '../config/abis/cacttWhitelist.json';
+const cacttWhitelistAbi = require('../../abis/cacttWhitelist.json');
 
 const getContract = (abi: any, address: string, signer?: Signer | Provider) => {
   const signerOrProvider = signer ?? simpleRpcProvider
