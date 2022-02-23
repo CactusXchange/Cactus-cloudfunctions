@@ -19,6 +19,6 @@
     "noImplicitAny": false
   },
   "compileOnSave": true,
-  "include": ["src/**/*.ts", "src/utils/web3.js", "tests/**/*.ts"],
+  "include": ["src/**/*.ts", "tests/**/*.ts"],
   "exclude": ["node_modules"]
 }
