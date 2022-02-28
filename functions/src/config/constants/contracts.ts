@@ -1,6 +1,6 @@
 export default {
   cacttWhitelist: {
     97: '',
-    56: '0xd04902EaB11085dc7f3b9858a91a5f9B89fFe696',
+    56: '0xE3Db0Cfb503bfe4C9a06A10FB80df4550e5d5C25',
   }
 }
