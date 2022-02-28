@@ -5,6 +5,11 @@
         "internalType": "contract ICactusToken",
         "name": "_cactt",
         "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_payableAddress",
+        "type": "address"
       }
     ],
     "stateMutability": "nonpayable",
@@ -64,8 +69,22 @@
         "type": "bool"
       }
     ],
-    "name": "WhitelistStatusChanged",
+    "name": "PrivatesaleStatusChanged",
     "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "_minimumPruchaseInBNB",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
   },
   {
     "inputs": [],
@@ -83,7 +102,7 @@
   },
   {
     "inputs": [],
-    "name": "openWhitelist",
+    "name": "openPrivatesale",
     "outputs": [
       {
         "internalType": "bool",
@@ -131,6 +150,34 @@
   },
   {
     "inputs": [],
+    "name": "payableAddress",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [],
+    "name": "privatesaleDistributed",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [],
     "name": "renounceOwnership",
     "outputs": [],
     "stateMutability": "nonpayable",
@@ -148,20 +195,6 @@
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "whitelistSaleDistributed",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
   },
   {
     "inputs": [
@@ -184,7 +217,7 @@
         "type": "address"
       }
     ],
-    "name": "registerWhitelist",
+    "name": "registerPrivatesale",
     "outputs": [],
     "stateMutability": "payable",
     "type": "function",
@@ -199,7 +232,7 @@
   },
   {
     "inputs": [],
-    "name": "timelyWhitelistPaymentRelease",
+    "name": "timelyPrivatesalePaymentRelease",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -247,7 +280,7 @@
             "type": "bool"
           }
         ],
-        "internalType": "struct CactusWhitelist.HolderInfo",
+        "internalType": "struct CactusPrivateSale.HolderInfo",
         "name": "",
         "type": "tuple"
       }
@@ -255,6 +288,19 @@
     "stateMutability": "view",
     "type": "function",
     "constant": true
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_payableAddress",
+        "type": "address"
+      }
+    ],
+    "name": "changePayableAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
   },
   {
     "inputs": [
@@ -277,12 +323,26 @@
   {
     "inputs": [
       {
-        "internalType": "bool",
-        "name": "status",
-        "type": "bool"
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
       }
     ],
-    "name": "setWhitelistStatus",
+    "name": "setMinimumCact",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "enablePrivatesale",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "closePrivatesale",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
