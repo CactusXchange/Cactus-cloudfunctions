@@ -6,7 +6,7 @@ import { NonceManager } from "@ethersproject/experimental";
 
 const privateKey = process.env.PRIVATE_KEY;
 
-export const releaseInitialWhitelistPayment = functions.pubsub.schedule('*/9 * * * *').timeZone('America/New_York')
+export const releaseInitialWhitelistPayment = functions.pubsub.schedule('* */23 * * *').timeZone('America/New_York')
   .onRun(async (context) => {
     const contract = getCacttTokenContract();
     
